@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-var MongoC = ConectarBD()
+var MongoCN = ConectarBD()
 var clientOptions = options.Client().ApplyURI("mongodb+srv://root:root@twitter.zrnsy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 func ConectarBD() *mongo.Client {
@@ -26,7 +26,7 @@ func ConectarBD() *mongo.Client {
 }
 
 func ChequeoConnection() int {
-	err := MongoC.Ping(context.TODO(), nil)
+	err := MongoCN.Ping(context.TODO(), nil)
 	if err != nil {
 		return 0
 	}

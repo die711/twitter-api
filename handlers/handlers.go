@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"api/middlew"
+	"api/routes"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 	"log"
@@ -12,7 +13,7 @@ import (
 func Manejadores() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
+	router.HandleFunc("/registro", middlew.ChequeoBD(routes.Registro)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 
