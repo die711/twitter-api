@@ -17,7 +17,7 @@ func InsertoTweet(t models.GraboTweet) (string, bool, error) {
 
 	registro := bson.M{
 		"userid":  t.UserID,
-		"mensage": t.Mensaje,
+		"mensaje": t.Mensaje,
 		"fecha":   t.Fecha,
 	}
 

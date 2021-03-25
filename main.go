@@ -6,9 +6,9 @@ import (
 	"log"
 )
 
-func main(){
+func main() {
 
-	if bd.ChequeoConnection() == 0{
+	if bd.ChequeoConnection() == 0 {
 		log.Fatal("Sin conexion ala BD")
 		return
 	}

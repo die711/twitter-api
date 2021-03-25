@@ -19,7 +19,6 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	if len(splitToken) != 2 {
 		return claims, false, "", errors.New("Formato de token invalido")
 	}
-
 	tk = strings.TrimSpace(splitToken[1])
 
 	tkn, err := jwt.ParseWithClaims(tk, claims, func(toke *jwt.Token) (interface{}, error) {
@@ -40,5 +39,4 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	}
 
 	return claims, false, "", err
-
 }
